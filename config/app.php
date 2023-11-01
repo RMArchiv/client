@@ -4,6 +4,16 @@ use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
 return [
+    /*
+    |--------------------------------------------------------------------------
+    | Application Setting
+    |--------------------------------------------------------------------------
+    |
+    | Application Settings for RMA Client
+    |
+    */
+    'api_url' => env('RMA_API_URL'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -185,6 +195,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'ApiHelper' => App\Helpers\ApiHelper::class,
     ])->toArray(),
 
 ];
