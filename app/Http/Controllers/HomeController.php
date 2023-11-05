@@ -12,6 +12,7 @@ class HomeController extends Controller
         // Aktualisieren der Games Tabelle der Datenbank
         ApiHelper::getGames();
 
+        // Laden der 4 meißt angeschauten Spiele.
         $data = Game::orderBy('views', 'DESC')->limit(4)->get();
 
         //Übergabe der Infos an View

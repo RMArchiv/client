@@ -6,7 +6,7 @@
         @foreach($data as $item)
             <x-game-card>
                 <x-slot name="title">
-                    {{$item->title}} - {{$item->subtitle}}
+                    {{$item->title}}@if($item->subtitle) - {{$item->subtitle}}@endif
                 </x-slot>
                 <x-slot name="game_id">{{ $item->game_id }}</x-slot>
             </x-game-card>
