@@ -1,15 +1,15 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
-        </div>
+    <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+        Most Viewed Games
+    </h4>
+    <div class="grid gap-6 mb-8 md:grid-cols-4">
+        @foreach($data as $item)
+            <x-game-card>
+                <x-slot name="title">
+                    {{$item->title}} - {{$item->subtitle}}
+                </x-slot>
+                <x-slot name="game_id">{{ $item->game_id }}</x-slot>
+            </x-game-card>
+        @endforeach
     </div>
 </x-app-layout>

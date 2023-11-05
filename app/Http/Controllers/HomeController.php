@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiHelper;
+use App\Models\Base\Game;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,6 +12,11 @@ class HomeController extends Controller
         // Aktualisieren der Games Tabelle der Datenbank
         ApiHelper::getGames();
 
-        return view('dashboard');
+        $data = Game::orderBy('views', 'DESC')->limit(4)->get();
+
+        //Übergabe der Infos an View
+        return view('dashboard',[
+            'data' => $data
+        ]);
     }
 }
