@@ -7,6 +7,10 @@ use App\Models\Base\Game;
 use Carbon\Carbon;
 
 class ApiHelper {
+    public static function getGamefiles($game_id){
+
+    }
+
     public static function getGames(){
         $url = config('app.api_url').'/games/'.ApiHelper::getApiDate('gamelist');
         $json = json_decode(file_get_contents($url),true);

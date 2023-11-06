@@ -4,6 +4,6 @@
     </h4>
     <img src="https://rmarchiv.de/games/{{ $game_id }}/screenshot/show/1">
     <p class="text-gray-600 dark:text-gray-400">
-        ASD
+
     </p>
 </div>

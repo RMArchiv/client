@@ -95,6 +95,38 @@ namespace App\Models\Base{
 	class Game extends \Eloquent {}
 }
 
+namespace App\Models\Base{
+/**
+ * Class Gamefile
+ *
+ * @property int|null $id
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ * @property int|null $game_id
+ * @property Carbon|null $release_date
+ * @property int|null $gamefile_type
+ * @property int|null $filesize
+ * @property int|null $installed
+ * @property string|null $extension
+ * @property int|null $forbidden
+ * @package App\Models\Base
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereExtension($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereFilesize($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereForbidden($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereGameId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereGamefileType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereInstalled($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereReleaseDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereUpdatedAt($value)
+ */
+	class Gamefile extends \Eloquent {}
+}
+
 namespace App\Models{
 /**
  * App\Models\Game
@@ -134,6 +166,37 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Game whereWebsiteUrl($value)
  */
 	class Game extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Gamefile
+ *
+ * @property int $id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int $game_id
+ * @property \Illuminate\Support\Carbon $release_date
+ * @property int $gamefile_type
+ * @property int $filesize
+ * @property int $installed
+ * @property string $extension
+ * @property int $forbidden
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereExtension($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereFilesize($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereForbidden($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereGameId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereGamefileType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereInstalled($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereReleaseDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Gamefile whereUpdatedAt($value)
+ */
+	class Gamefile extends \Eloquent {}
 }
 
 namespace App\Models{
